@@ -201,6 +201,10 @@ enum Commands {
 	/// Open the main dashboard
 	#[command(alias = "home")]
 	Dash,
+
+	/// Add a new domain to Cloudflare
+	#[command(alias = "add-site")]
+	AddDomain,
 }
 
 fn main() {
@@ -270,6 +274,7 @@ fn main() {
 		Commands::WebAnalytics => account_url("web-analytics"),
 		Commands::Logs { zone: None } => account_url("logs"),
 		Commands::Dash => DASH_BASE.to_string(),
+		Commands::AddDomain => account_url("add-site"),
 	};
 
 	let spinner = ProgressBar::new_spinner();
