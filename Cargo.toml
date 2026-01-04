@@ -1,0 +1,16 @@
+[package]
+name = "cfurl"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+categories = ["command-line-utilities"]
+keywords = ["cloudflare", "cli", "dashboard"]
+repository = "https://github.com/m1guelpf/cf-url"
+authors = ["Miguel Piedrafita <rust@miguel.build>"]
+description = "Quick access to Cloudflare dashboard pages"
+
+[dependencies]
+open = "5"
+indicatif = "0.18"
+clap = { version = "4", features = ["derive"] }
